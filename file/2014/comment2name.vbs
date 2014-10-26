@@ -5,8 +5,8 @@
 '* Category: 打开物理模型，运行本脚本（Ctrl+Shift+X）
 '* Copyright:foxzz@163.com,2006/07/25 .
 '* Author:   foxzz
-'* Modified: adeuxy@gmail.com,2014/10/15
-'* Version:  1.0
+'* Modified: a@adeuxy.com,2014/10/15
+'* Version:  1.1
 '* Comment:  遍历物理模型中的所有表，将字段的comment赋值到字段的name中。
 '            在将name置换为comment过程中，需要考虑的问题
 '            1、name必须唯一，而comment有可能不唯一。

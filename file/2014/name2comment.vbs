@@ -5,7 +5,7 @@
 '* Category: 打开物理模型，运行本脚本（Ctrl+Shift+X）
 '* Copyright:foxzz@163.com,2006/07/25 .
 '* Author:   foxzz
-'* Modified: adeuxy@gmail.com,2014/10/15
+'* Modified: a@adeuxy.com,2014/10/15
 '* Version:  1.1
 '* Comment:  遍历物理模型中的所有表，将字段的name赋值到字段的comment中。
 '            在将name置换为comment过程中，需要考虑的问题
