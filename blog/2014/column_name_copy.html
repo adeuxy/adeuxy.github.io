@@ -6,6 +6,55 @@
 	<meta name="keywords" content="PowerDesigner,name,comment,sql,adeuxy">
 	<meta name="description" content="PowerDesigner,name,comment,sql,adeuxy">
 	<title>PowerDesigner中comment字段和name字段相互转换#数据库</title>
+	<script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.min.js"></script>
+	<script>
+		if (!window.jQuery) {
+		var script = document.createElement('script');
+		script.src = "../../file/js/jquery-1.9.0.min.js";
+		document.body.appendChild(script);
+		}	
+	</script>
+	<script>
+		$("#back-top").hide();
+		$(document).ready(function () {
+		  $(window).scroll(function () {
+		    if ($(this).scrollTop() > 100) {
+		      $('#back-top').fadeIn();
+		    } else {
+		      $('#back-top').fadeOut();
+		    }
+		  });
+		  $('#back-top a').click(function () {
+		    $('body,html').animate({
+		      scrollTop: 0
+		    }, 800);
+		    return false;
+		  });
+		});
+	</script>
+	<style>
+		#back-top {
+		  position: fixed;
+		  bottom: 30px;
+		  margin-left: 1040px;
+		}
+		#back-top a {
+		  width: 54px;
+		  height: 54px;
+		  display: block;
+		  background: #ddd url(../../img/2014/bg_up_arrow.png) no-repeat center center;
+		  background-color: #aaa;
+		  -webkit-border-radius: 7px;
+		  -moz-border-radius: 7px;
+		  border-radius: 7px;
+		  -webkit-transition: 1s;
+		  -moz-transition: 1s;
+		  transition: 1s;
+		}
+		#back-top a:hover {
+		  background-color: #777;
+		}
+	</style>
 </head>
 <body bgcolor="#C7EDCC">
 	<div style="margin-left: 3%;">
@@ -112,9 +161,6 @@
 		                    InteractiveMode = im_Batch
 		                </p>
 		                <p>
-		                    &nbsp;
-		                </p>
-		                <p>
 		                    Dim system, file
 		                </p>
 		                <p>
@@ -137,12 +183,6 @@
 		                </p>
 		                <p>
 		                    &#39;Set file = system.OpenTextFile(&quot;C:/pdcomment.txt&quot;, ForWriting, true)
-		                </p>
-		                <p>
-		                    &nbsp;
-		                </p>
-		                <p>
-		                    &nbsp;
 		                </p>
 		                <p>
 		                    &#39;判断当前model是否物理数据模型
@@ -178,12 +218,6 @@
 		                    &#39;file.Close
 		                </p>
 		                <p>
-		                    &nbsp;
-		                </p>
-		                <p>
-		                    &nbsp;
-		                </p>
-		                <p>
 		                    &#39;******************************************************************************
 		                </p>
 		                <p>
@@ -197,9 +231,6 @@
 		                </p>
 		                <p>
 		                    i=0:j=0:k=0
-		                </p>
-		                <p>
-		                    &nbsp;
 		                </p>
 		                <p>
 		                    &#39;列数组，记录字段里不重复的comment
@@ -217,9 +248,6 @@
 		                    ReDim Preserve ColumnCommentNumber(i)
 		                </p>
 		                <p>
-		                    &nbsp;
-		                </p>
-		                <p>
 		                    Dim tbl &nbsp; &#39;当前表
 		                </p>
 		                <p>
@@ -227,9 +255,6 @@
 		                </p>
 		                <p>
 		                    dim curComment &nbsp;&#39;当前字段comment
-		                </p>
-		                <p>
-		                    &nbsp;
 		                </p>
 		                <p>
 		                    &#39;处理模型中的表
@@ -251,9 +276,6 @@
 		                </p>
 		                <p>
 		                    &nbsp; &nbsp; &nbsp; &nbsp;end if &nbsp;
-		                </p>
-		                <p>
-		                    &nbsp;
 		                </p>
 		                <p>
 		                    &nbsp; &nbsp; &nbsp; &nbsp;&#39;处理表中的列
@@ -370,13 +392,7 @@
 		                    &nbsp; &nbsp; i=0:j=0:k=0
 		                </p>
 		                <p>
-		                    &nbsp;
-		                </p>
-		                <p>
 		                    next
-		                </p>
-		                <p>
-		                    &nbsp;
 		                </p>
 		                <p>
 		                    Dim view &nbsp;&#39;当前视图
@@ -400,9 +416,6 @@
 		                    next
 		                </p>
 		                <p>
-		                    &nbsp;
-		                </p>
-		                <p>
 		                    &#39;对子目录进行递归
 		                </p>
 		                <p>
@@ -422,9 +435,6 @@
 		                </p>
 		                <p>
 		                    Next
-		                </p>
-		                <p>
-		                    &nbsp;
 		                </p>
 		                <p>
 		                    end sub
@@ -490,9 +500,6 @@
 		                    &#39;******************************************************************************
 		                </p>
 		                <p>
-		                    &nbsp;
-		                </p>
-		                <p>
 		                    Option Explicit&nbsp;
 		                </p>
 		                <p>
@@ -502,13 +509,7 @@
 		                    InteractiveMode = im_Batch&nbsp;
 		                </p>
 		                <p>
-		                    &nbsp;
-		                </p>
-		                <p>
 		                    Dim mdl &#39; the current model&nbsp;
-		                </p>
-		                <p>
-		                    &nbsp;
 		                </p>
 		                <p>
 		                    &#39; get the current active model&nbsp;
@@ -536,9 +537,6 @@
 		                </p>
 		                <p>
 		                    End If
-		                </p>
-		                <p>
-		                    &nbsp;
 		                </p>
 		                <p>
 		                    &#39; This routine copy name into comment for each table, each column and each view&nbsp;
@@ -592,9 +590,6 @@
 		                    &nbsp;next &nbsp;
 		                </p>
 		                <p>
-		                    &nbsp; &nbsp;
-		                </p>
-		                <p>
 		                    &nbsp;Dim view &#39;running view &nbsp;
 		                </p>
 		                <p>
@@ -611,9 +606,6 @@
 		                </p>
 		                <p>
 		                    &nbsp;next &nbsp;
-		                </p>
-		                <p>
-		                    &nbsp; &nbsp;
 		                </p>
 		                <p>
 		                    &nbsp;&#39; go into the sub-packages &nbsp;
@@ -650,6 +642,10 @@
 		<a href="../../index.html"><h>首页</h></a>/<a href="../../cat/database.html"><h>数据库</h></a>
 	</div>
 	<hr/>
+	<!-- 返回顶部 -->
+	<div id="back-top">
+	  <a href="#top" title="回到顶部"></a>
+	</div>
 	<!-- disqus comment -->
 	<div id="disqus_thread" style="margin-left: 25%; margin-right: 25%" ></div>
     <script type="text/javascript">
