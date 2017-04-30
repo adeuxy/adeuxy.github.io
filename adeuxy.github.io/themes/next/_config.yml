@@ -135,6 +135,7 @@ font:
 # Value is the target link (E.g. GitHub: https://github.com/iissnan)
 social:
   GitHub: https://github.com/adeuxy
+  Mail: http://adeuxy.com/mail
 
 
 # Social Links Icons
@@ -149,6 +150,7 @@ social_icons:
   GitHub: github
   Twitter: twitter
   Weibo: weibo
+  Mail: envelope
 
 
 # Sidebar Avatar
