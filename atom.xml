@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://adeuxy.github.io</id>
     <title>Michael Li</title>
-    <updated>2020-10-14T12:14:55.232Z</updated>
+    <updated>2020-12-02T05:56:55.057Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://adeuxy.github.io"/>
     <link rel="self" href="https://adeuxy.github.io/atom.xml"/>
@@ -16,6 +16,13 @@
         <link href="https://adeuxy.github.io/post/urls/">
         </link>
         <updated>2020-08-08T09:00:32.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[一只刺猬]]></title>
+        <id>https://adeuxy.github.io/post/yi-zhi-ci-wei/</id>
+        <link href="https://adeuxy.github.io/post/yi-zhi-ci-wei/">
+        </link>
+        <updated>2020-07-25T02:09:46.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[读《史蒂夫·乔布斯传》]]></title>
