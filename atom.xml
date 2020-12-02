@@ -1,54 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://adeuxy.github.io</id>
+    <id>http://adeuxy.github.io</id>
     <title>Michael Li</title>
-    <updated>2020-12-02T09:13:41.228Z</updated>
+    <updated>2020-12-02T12:07:48.509Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://adeuxy.github.io"/>
-    <link rel="self" href="https://adeuxy.github.io/atom.xml"/>
+    <link rel="alternate" href="http://adeuxy.github.io"/>
+    <link rel="self" href="http://adeuxy.github.io/atom.xml"/>
     <subtitle>温故而知新</subtitle>
-    <logo>https://adeuxy.github.io/images/avatar.png</logo>
-    <icon>https://adeuxy.github.io/favicon.ico</icon>
+    <logo>http://adeuxy.github.io/images/avatar.png</logo>
+    <icon>http://adeuxy.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Michael Li</rights>
     <entry>
         <title type="html"><![CDATA[有用的网站]]></title>
-        <id>https://adeuxy.github.io/post/urls/</id>
-        <link href="https://adeuxy.github.io/post/urls/">
+        <id>http://adeuxy.github.io/post/urls/</id>
+        <link href="http://adeuxy.github.io/post/urls/">
         </link>
         <updated>2020-08-08T09:00:32.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[一只刺猬]]></title>
-        <id>https://adeuxy.github.io/post/yi-zhi-ci-wei/</id>
-        <link href="https://adeuxy.github.io/post/yi-zhi-ci-wei/">
+        <id>http://adeuxy.github.io/post/yi-zhi-ci-wei/</id>
+        <link href="http://adeuxy.github.io/post/yi-zhi-ci-wei/">
         </link>
         <updated>2020-07-25T02:09:46.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[读《史蒂夫·乔布斯传》]]></title>
-        <id>https://adeuxy.github.io/post/HYQoQaHrZ/</id>
-        <link href="https://adeuxy.github.io/post/HYQoQaHrZ/">
+        <id>http://adeuxy.github.io/post/HYQoQaHrZ/</id>
+        <link href="http://adeuxy.github.io/post/HYQoQaHrZ/">
         </link>
         <updated>2020-07-12T09:02:52.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[有用的命令]]></title>
-        <id>https://adeuxy.github.io/post/handbook/</id>
-        <link href="https://adeuxy.github.io/post/handbook/">
+        <id>http://adeuxy.github.io/post/handbook/</id>
+        <link href="http://adeuxy.github.io/post/handbook/">
         </link>
         <updated>2020-07-11T03:39:37.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[远程桌面]]></title>
-        <id>https://adeuxy.github.io/post/yuan-cheng-zhuo-mian/</id>
-        <link href="https://adeuxy.github.io/post/yuan-cheng-zhuo-mian/">
+        <id>http://adeuxy.github.io/post/yuan-cheng-zhuo-mian/</id>
+        <link href="http://adeuxy.github.io/post/yuan-cheng-zhuo-mian/">
         </link>
         <updated>2020-07-05T06:04:42.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[有用的工具]]></title>
-        <id>https://adeuxy.github.io/post/tools/</id>
-        <link href="https://adeuxy.github.io/post/tools/">
+        <id>http://adeuxy.github.io/post/tools/</id>
+        <link href="http://adeuxy.github.io/post/tools/">
         </link>
         <updated>2020-06-25T09:58:02.000Z</updated>
     </entry>
