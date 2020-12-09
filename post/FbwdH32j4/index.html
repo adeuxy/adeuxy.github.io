@@ -2,27 +2,22 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>有用的命令 | Michael Li</title>
+<title>使用mybaties速度慢，直接查询MySQL快 | Michael Li</title>
 <link rel="shortcut icon" href="http://adeuxy.github.io/favicon.ico?v=1607484111665">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="http://adeuxy.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="有用的命令 | Michael Li - Atom Feed" href="http://adeuxy.github.io/atom.xml">
+<link rel="alternate" type="application/atom+xml" title="使用mybaties速度慢，直接查询MySQL快 | Michael Li - Atom Feed" href="http://adeuxy.github.io/atom.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="查看端口和连接信息
-netstat -ntlp
-
-列出占用端口进程
-lsof -i :8080
-
-查看iptables状态
-/etc/init.d/iptables status
-
-添加8080端口
-/sbin/iptables -I IN..." />
-    <meta name="keywords" content="命令,shell" />
+    <meta name="description" content="在使用mybaties进行xml生成sql 查询的时候，比较慢，但是把sql直接在MySQL中查询速度并不慢。
+这是mybaties的问题。
+将sql xml中部分的#改为$就可以了。
+网络搜索到原因如下
+1、条件字段存在隐式转换
+举个例子..." />
+    <meta name="keywords" content="mybaties,MySQL" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
   </head>
@@ -84,65 +79,54 @@ lsof -i :8080
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              有用的命令
+              使用mybaties速度慢，直接查询MySQL快
             </h2>
             <div class="post-info">
               <span>
-                2010-07-17
+                2020-12-12
               </span>
               <span>
-                1 min read
+                2 min read
               </span>
               
-                <a href="http://adeuxy.github.io/tag/6y_VcVS4F/" class="post-tag">
-                  # 命令
+                <a href="http://adeuxy.github.io/tag/iQN9qrDPo/" class="post-tag">
+                  # mybaties
                 </a>
               
-                <a href="http://adeuxy.github.io/tag/vj4IUNnSD/" class="post-tag">
-                  # shell
+                <a href="http://adeuxy.github.io/tag/VW-mLzTZpe/" class="post-tag">
+                  # MySQL
                 </a>
               
             </div>
             
             <div class="post-content-wrapper">
               <div class="post-content">
-                <h2 id="查看端口和连接信息">查看端口和连接信息</h2>
-<pre><code class="language-shell">netstat -ntlp
-</code></pre>
-<h2 id="列出占用端口进程">列出占用端口进程</h2>
-<pre><code class="language-shell">lsof -i :8080
-</code></pre>
-<h2 id="查看iptables状态">查看iptables状态</h2>
-<pre><code class="language-shell">/etc/init.d/iptables status
-</code></pre>
-<h2 id="添加8080端口">添加8080端口</h2>
-<pre><code class="language-shell">/sbin/iptables -I INPUT -p tcp --dport 8080 -j ACCEPT
-/etc/rc.d/init.d/iptables save
-/etc/init.d/iptables restart
-</code></pre>
-<h2 id="按日期动态命名日志文件">按日期动态命名日志文件</h2>
-<pre><code class="language-shell">/`date &quot;+%F&quot;`.`date &quot;+%H-%M-%S&quot;`.`date &quot;+%N&quot;` 2&gt;&amp;1
-</code></pre>
-<center><img src="http://qkp0gatay.hb-bkt.clouddn.com/img/people-s-h.jpg" style="width: 90%;height: auto;"></img></center>
+                <p>在使用mybaties进行xml生成sql 查询的时候，比较慢，但是把sql直接在MySQL中查询速度并不慢。</p>
+<p>这是mybaties的问题。</p>
+<p>将sql xml中部分的#改为$就可以了。</p>
+<p>网络搜索到原因如下</p>
+<p>1、条件字段存在隐式转换</p>
+<p>举个例子，sql有个时间字段，数据库是date类型，java实体里是util.date类型，这样的话，mybatis会把实体的时间字段转为timestamp类型，导致你的时间字段用不到索引，这样就走了错误的执行计划。解决办法就是字段类型统一。</p>
+<p>2、数据倾斜（skew data）的列上用到占位符</p>
+<p>这里牵扯到了变量窥探的东西，Oracle在处理带有绑定变量的SQL时候，只会在硬解析的时候才会“窥探”一下SQL中绑定变量的值，然后会根据窥探到的值来决定整个SQL的执行计划。举个例子，我有一张表t，有一个性别字段sex（男女），当where sex = 男 的时候，有很多数据并且走了全表，但是当sex = 女 的时候，只有很少的数据，是应该走索引的，这样就会用到错误的执行计划。绑定变量被使用时，查询优化器会忽略其具体值，因此其预估的准确性远不如使用字面量值真实，尤其是在表存在数据倾斜(表上的数据非均匀分布)的列上会提供错误的执行计划，从而使得非高效的执行计划被使用。解决办法就是对于这种数据倾斜的列，把#{}改成${}。</p>
+
               </div>
               <div class="toc-container">
-                <ul class="markdownIt-TOC">
-<li>
-<ul>
-<li><a href="#%E6%9F%A5%E7%9C%8B%E7%AB%AF%E5%8F%A3%E5%92%8C%E8%BF%9E%E6%8E%A5%E4%BF%A1%E6%81%AF">查看端口和连接信息</a></li>
-<li><a href="#%E5%88%97%E5%87%BA%E5%8D%A0%E7%94%A8%E7%AB%AF%E5%8F%A3%E8%BF%9B%E7%A8%8B">列出占用端口进程</a></li>
-<li><a href="#%E6%9F%A5%E7%9C%8Biptables%E7%8A%B6%E6%80%81">查看iptables状态</a></li>
-<li><a href="#%E6%B7%BB%E5%8A%A08080%E7%AB%AF%E5%8F%A3">添加8080端口</a></li>
-<li><a href="#%E6%8C%89%E6%97%A5%E6%9C%9F%E5%8A%A8%E6%80%81%E5%91%BD%E5%90%8D%E6%97%A5%E5%BF%97%E6%96%87%E4%BB%B6">按日期动态命名日志文件</a></li>
-</ul>
-</li>
-</ul>
-
+                
               </div>
             </div>
           </article>
         </div>
 
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="http://adeuxy.github.io/post/yi-zhi-ci-wei/">
+              <h3 class="post-title">
+                一只刺猬
+              </h3>
+            </a>
+          </div>
         
 
         
