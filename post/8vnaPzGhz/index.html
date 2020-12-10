@@ -2,21 +2,20 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>一只刺猬 | Michael Li</title>
+<title>java将html转图片，使用html2image | Michael Li</title>
 <link rel="shortcut icon" href="http://adeuxy.github.io/favicon.ico?v=1607581893940">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="http://adeuxy.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="一只刺猬 | Michael Li - Atom Feed" href="http://adeuxy.github.io/atom.xml">
+<link rel="alternate" type="application/atom+xml" title="java将html转图片，使用html2image | Michael Li - Atom Feed" href="http://adeuxy.github.io/atom.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="每天晚上都能发现同一只刺猬🐌出来觅食😄
-FFmpeg
-使用FFmpeg转换视频文件：
--crf 参数: 是控制转码后视频的质量，质量越高，文件也就越大。
-此值的范围是 0 到 51：0 表示高清无损；23 是默认值（如果没有指定此参数）..." />
-    <meta name="keywords" content="刺猬,FFmpeg" />
+    <meta name="description" content="&lt;dependency&gt;
+    &lt;groupId&gt;gui.ava&lt;/groupId&gt;
+    &lt;artifactId&gt;html2image&lt;/artifactId&gt;
+    &l..." />
+    <meta name="keywords" content="html2image,html转图片,java" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
   </head>
@@ -78,52 +77,49 @@ FFmpeg
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              一只刺猬
+              java将html转图片，使用html2image
             </h2>
             <div class="post-info">
               <span>
-                2020-07-25
+                2020-12-06
               </span>
               <span>
                 1 min read
               </span>
               
-                <a href="http://adeuxy.github.io/tag/TmGAvtyAA/" class="post-tag">
-                  # 刺猬
+                <a href="http://adeuxy.github.io/tag/9RD6GwXOD/" class="post-tag">
+                  # html2image
                 </a>
               
-                <a href="http://adeuxy.github.io/tag/VpiZI-uRbD/" class="post-tag">
-                  # FFmpeg
+                <a href="http://adeuxy.github.io/tag/NCoTFIqPEc/" class="post-tag">
+                  # html转图片
+                </a>
+              
+                <a href="http://adeuxy.github.io/tag/afSkk-_MFX/" class="post-tag">
+                  # java
                 </a>
               
             </div>
             
             <div class="post-content-wrapper">
               <div class="post-content">
-                <p>每天晚上都能发现同一只刺猬🐌出来觅食😄</p>
-<h2 id="ffmpeg">FFmpeg</h2>
-<p>使用FFmpeg转换视频文件：<br>
--crf 参数: 是控制转码后视频的质量，质量越高，文件也就越大。<br>
-此值的范围是 0 到 51：0 表示高清无损；23 是默认值（如果没有指定此参数）；51 虽然文件最小，但效果是最差的。（<a href="/post/tools" target="_blank">去下载FFmpeg</a>）</p>
-<pre><code>ffmpeg-4.3-win64-static\bin&gt;ffmpeg.exe -i 2.mov -crf 10 2.mp4
+                <pre><code>&lt;dependency&gt;
+    &lt;groupId&gt;gui.ava&lt;/groupId&gt;
+    &lt;artifactId&gt;html2image&lt;/artifactId&gt;
+    &lt;version&gt;2.0.1&lt;/version&gt;
+&lt;/dependency&gt;
 </code></pre>
-<video src="http://qkp0gatay.hb-bkt.clouddn.com/video/79.MP4" controls="controls" style="width: 100%;height: auto;">
-your browser does not support the video tag
-</video>
-<hr/>
-<video src="http://qkp0gatay.hb-bkt.clouddn.com/video/80.MP4" controls="controls" style="width: 100%;height: auto;">
-your browser does not support the video tag
-</video>
+<p>注意版本使用最新版 <a href="https://mvnrepository.com/artifact/gui.ava/html2image" target="_blank">https://mvnrepository.com/artifact/gui.ava/html2image</a></p>
+<pre><code class="language-java">String s = &quot;your html&quot;;
+Html2Image html2Image = Html2Image.fromHtml(s);
+ImageRenderer imageRenderer = html2Image.getImageRenderer();
+imageRenderer.saveImage(&quot;1.png&quot;);
+</code></pre>
+<p>在存储为png时候，没有背景色，并且表格有实线</p>
+
               </div>
               <div class="toc-container">
-                <ul class="markdownIt-TOC">
-<li>
-<ul>
-<li><a href="#ffmpeg">FFmpeg</a></li>
-</ul>
-</li>
-</ul>
-
+                
               </div>
             </div>
           </article>
@@ -132,9 +128,9 @@ your browser does not support the video tag
         
           <div class="next-post">
             <div class="next">下一篇</div>
-            <a href="http://adeuxy.github.io/post/HYQoQaHrZ/">
+            <a href="http://adeuxy.github.io/post/FbwdH32j4/">
               <h3 class="post-title">
-                读《史蒂夫·乔布斯传》
+                使用mybaties速度慢，直接查询MySQL快
               </h3>
             </a>
           </div>

@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://adeuxy.github.io</id>
     <title>Michael Li</title>
-    <updated>2020-12-09T06:44:01.538Z</updated>
+    <updated>2020-12-10T06:31:39.967Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://adeuxy.github.io"/>
     <link rel="self" href="http://adeuxy.github.io/atom.xml"/>
@@ -10,6 +10,13 @@
     <logo>http://adeuxy.github.io/images/avatar.png</logo>
     <icon>http://adeuxy.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Michael Li</rights>
+    <entry>
+        <title type="html"><![CDATA[java将html转图片，使用html2image]]></title>
+        <id>http://adeuxy.github.io/post/8vnaPzGhz/</id>
+        <link href="http://adeuxy.github.io/post/8vnaPzGhz/">
+        </link>
+        <updated>2020-12-06T06:26:35.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[使用mybaties速度慢，直接查询MySQL快]]></title>
         <id>http://adeuxy.github.io/post/FbwdH32j4/</id>
