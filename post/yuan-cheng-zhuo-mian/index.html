@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>远程桌面 | Michael Li</title>
-<link rel="shortcut icon" href="http://adeuxy.github.io/favicon.ico?v=1607748407648">
+<link rel="shortcut icon" href="http://adeuxy.github.io/favicon.ico?v=1607751273105">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="http://adeuxy.github.io/styles/main.css">
 <link rel="alternate" type="application/atom+xml" title="远程桌面 | Michael Li - Atom Feed" href="http://adeuxy.github.io/atom.xml">
@@ -13,12 +13,12 @@
 
     <meta name="description" content="需要远程控制Windows，迫于teamviewer开始收费，识别为商业账号，连接5分钟就断开。换！
 frp
-很好用，用于内网穿透。（去下载frp）
+很好用，用于内网穿透。
 服务端：
 基本不用修改配置，直接启动就可以了
 frps.ini
 [common]
-bind..." />
+bind_port = ..." />
     <meta name="keywords" content="frp,内网穿透,远程桌面,rdpwrap" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
@@ -28,7 +28,7 @@ bind..." />
       <div class="main-content">
         <div class="site-header">
   <a href="http://adeuxy.github.io">
-  <img class="avatar" src="http://adeuxy.github.io/images/avatar.png?v=1607748407648" alt="">
+  <img class="avatar" src="http://adeuxy.github.io/images/avatar.png?v=1607751273105" alt="">
   </a>
   <h1 class="site-title">
     Michael Li
@@ -113,7 +113,7 @@ bind..." />
               <div class="post-content">
                 <p>需要远程控制Windows，迫于teamviewer开始收费，识别为商业账号，连接5分钟就断开。换！</p>
 <h2 id="frp">frp</h2>
-<p>很好用，用于内网穿透。（<a href="/post/tools" target="_blank">去下载frp</a>）<br>
+<p>很好用，用于内网穿透。<br>
 服务端：<br>
 基本不用修改配置，直接启动就可以了</p>
 <pre><code>frps.ini
@@ -140,9 +140,9 @@ remote_port = 6000
 </code></pre>
 <p>发现Win 10 家庭版的 没有远程桌面设置，无语微软。。。</p>
 <h2 id="rdpwrap">RDPWrap</h2>
-<p>使用RDPWrap（<a href="/post/tools" target="_blank">去下载RDPWrap</a>）<br>
+<p>使用RDPWrap<br>
 以管理员身份执行install.bat就安装完了。<br>
-之后打开RDPConf.exe查看是否正常，如果没有listening，那么需要替换rdpwrap.ini文件（<a href="/post/tools" target="_blank">去下载rdpwrap.txt</a>）</p>
+之后打开RDPConf.exe查看是否正常，如果没有listening，那么需要替换rdpwrap.ini文件</p>
 <pre><code>\Program Files\RDP Wrapper\rdpwrap.ini
 </code></pre>
 <p>替换后去服务里重启remote desktop service就正常了。<br>
@@ -168,9 +168,9 @@ remote_port = 6000
         
           <div class="next-post">
             <div class="next">下一篇</div>
-            <a href="http://adeuxy.github.io/post/tools/">
+            <a href="http://adeuxy.github.io/post/urls/">
               <h3 class="post-title">
-                有用的工具
+                有用的网站
               </h3>
             </a>
           </div>

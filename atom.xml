@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://adeuxy.github.io</id>
     <title>Michael Li</title>
-    <updated>2020-12-12T04:46:59.864Z</updated>
+    <updated>2020-12-12T05:36:21.535Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://adeuxy.github.io"/>
     <link rel="self" href="http://adeuxy.github.io/atom.xml"/>
@@ -44,13 +44,6 @@
         <link href="http://adeuxy.github.io/post/yuan-cheng-zhuo-mian/">
         </link>
         <updated>2018-12-23T06:04:42.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[有用的工具]]></title>
-        <id>http://adeuxy.github.io/post/tools/</id>
-        <link href="http://adeuxy.github.io/post/tools/">
-        </link>
-        <updated>2018-06-16T09:58:02.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[有用的网站]]></title>
