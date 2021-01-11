@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>java将html转图片，使用html2image | Michael Li</title>
-<link rel="shortcut icon" href="http://adeuxy.github.io/favicon.ico?v=1608815209306">
+<link rel="shortcut icon" href="http://adeuxy.github.io/favicon.ico?v=1610356642812">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="http://adeuxy.github.io/styles/main.css">
 <link rel="alternate" type="application/atom+xml" title="java将html转图片，使用html2image | Michael Li - Atom Feed" href="http://adeuxy.github.io/atom.xml">
@@ -24,7 +24,7 @@
       <div class="main-content">
         <div class="site-header">
   <a href="http://adeuxy.github.io">
-  <img class="avatar" src="http://adeuxy.github.io/images/avatar.png?v=1608815209306" alt="">
+  <img class="avatar" src="http://adeuxy.github.io/images/avatar.png?v=1610356642812" alt="">
   </a>
   <h1 class="site-title">
     Michael Li
@@ -115,7 +115,8 @@ Html2Image html2Image = Html2Image.fromHtml(s);
 ImageRenderer imageRenderer = html2Image.getImageRenderer();
 imageRenderer.saveImage(&quot;1.png&quot;);
 </code></pre>
-<p>在存储为png时候，没有背景色，并且表格有实线</p>
+<p>在存储为png时候，没有背景色，并且表格有实线。<br>
+不过这个包比较比较久了，还是先借助转PDF再转图片兼容性好些。</p>
 
               </div>
               <div class="toc-container">

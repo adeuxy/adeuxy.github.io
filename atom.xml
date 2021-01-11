@@ -2,14 +2,14 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://adeuxy.github.io</id>
     <title>Michael Li</title>
-    <updated>2020-12-24T13:08:31.920Z</updated>
+    <updated>2021-01-11T09:19:44.100Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://adeuxy.github.io"/>
     <link rel="self" href="http://adeuxy.github.io/atom.xml"/>
     <subtitle>大自然的搬运工</subtitle>
     <logo>http://adeuxy.github.io/images/avatar.png</logo>
     <icon>http://adeuxy.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, Michael Li</rights>
+    <rights>All rights reserved 2021, Michael Li</rights>
     <entry>
         <title type="html"><![CDATA[java将html转图片，使用html2image]]></title>
         <id>http://adeuxy.github.io/post/8vnaPzGhz/</id>
